@@ -12,8 +12,9 @@ hilt="2.60.1"
 ksp="2.3.9"
 navigation="1.2.0"
 retrofit = "2.11.0"
-
-
+mockk="1.14.11"
+coroutine-test="1.11.0"
+turbine="0.12.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -35,6 +36,12 @@ android-hilt={ group = "com.google.dagger", name = "hilt-android", version.ref =
 hilt-navigation-compose={ group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "navigation"}
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+mockk= { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+mockk-android= { group = "io.mockk", name = "mockk-android", version.ref = "mockk" }
+coroutine-test={ group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutine-test" }
+turbine={ group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

@@ -19,6 +19,7 @@ import kotlinx.coroutines.launch
 
 @HiltViewModel
 class UsersViewModel @Inject constructor(private val getUsersUseCase: UsersUseCase) : ViewModel() {
+    private val _usersUiState = MutableStateFlow<UiState<List<Users>>>(UiState.Loading)
 
     val usersUiState: StateFlow<UiState<List<Users>>> = getUsersUseCase()
         .map { data -> if (data.isEmpty()) UiState.Empty else UiState.Success(data) }
