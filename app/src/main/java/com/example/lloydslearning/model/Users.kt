@@ -1,6 +1,6 @@
 package com.example.lloydslearning.model
 
-import com.example.lloydslearning.dto.UsersDtoItem
+import com.example.lloydslearning.data.dto.UsersDtoItem
 
 data class Users(val name:String?,val userName:String?,val id:Int?)
 

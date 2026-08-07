@@ -20,11 +20,16 @@ import kotlinx.coroutines.launch
 @HiltViewModel
 class UsersViewModel @Inject constructor(private val getUsersUseCase: UsersUseCase) : ViewModel() {
     private val _usersUiState = MutableStateFlow<UiState<List<Users>>>(UiState.Loading)
+    val userUiState=_usersUiState
 
-    val usersUiState: StateFlow<UiState<List<Users>>> = getUsersUseCase()
-        .map { data -> if (data.isEmpty()) UiState.Empty else UiState.Success(data) }
-        .onStart { emit(UiState.Loading) }
-        .catch { e -> emit(UiState.Error(e.message ?: "Unknown error")) }
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), UiState.Loading)
+    val usersStateFlow: StateFlow<UiState<List<Users>>>
+    =getUsersUseCase().map { data->if(data.isEmpty())
+        UiState.Empty
+        else
+        UiState.Success(data)
+    }.onStart { emit(UiState.Loading) }.catch { e-> emit(UiState.Error(e.message?:"UnKnown Error")) }.stateIn(viewModelScope,
+        SharingStarted.WhileSubscribed(5000), UiState.Loading)
+
+
 }
 

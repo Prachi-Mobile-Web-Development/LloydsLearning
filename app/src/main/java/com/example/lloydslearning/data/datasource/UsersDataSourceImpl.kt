@@ -1,7 +1,7 @@
 package com.example.lloydslearning.data.datasource
 
 import com.example.lloydslearning.data.remote.UsersApiService
-import com.example.lloydslearning.dto.UsersDtoItem
+import com.example.lloydslearning.data.dto.UsersDtoItem
 import javax.inject.Inject
 
 class UsersDataSourceImpl @Inject constructor(val usersApiService: UsersApiService): UsersDataSource {

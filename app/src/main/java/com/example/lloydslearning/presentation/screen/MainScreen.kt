@@ -10,7 +10,7 @@ import com.example.lloydslearning.presentation.viewmodel.UsersViewModel
 
 @Composable
 fun MainScreen(usersViewModel: UsersViewModel = hiltViewModel()) {
-    val state by usersViewModel.usersUiState.collectAsStateWithLifecycle()
+    val state by usersViewModel.userUiState.collectAsStateWithLifecycle()
 
     when (val user = state) {
         is UiState.Loading ->

@@ -8,6 +8,7 @@ import com.example.lloydslearning.presentation.viewmodel.UsersViewModel
 import io.mockk.clearAllMocks
 import io.mockk.every
 import io.mockk.mockk
+import io.mockk.verify
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flow
@@ -22,7 +23,9 @@ import org.junit.Before
 import org.junit.Test
 
 @OptIn(ExperimentalCoroutinesApi::class)
-class UsersViewModelTest {
+class
+
+UsersViewModelTest {
 
     private val usersUseCase: UsersUseCase = mockk()
     private val testDispatcher = StandardTestDispatcher()
@@ -53,7 +56,7 @@ class UsersViewModelTest {
             cancelAndIgnoreRemainingEvents()
 
         }
-        every { usersUseCase() }
+        verify { usersUseCase() }
 
 
     }

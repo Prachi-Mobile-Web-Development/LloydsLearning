@@ -1,6 +1,6 @@
 package com.example.lloydslearning.data.remote
 
-import com.example.lloydslearning.dto.UsersDtoItem
+import com.example.lloydslearning.data.dto.UsersDtoItem
 import retrofit2.http.GET
 
 interface UsersApiService {
