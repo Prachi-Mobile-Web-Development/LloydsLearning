@@ -47,7 +47,7 @@ UsersViewModelTest {
         val listOfUsers = listOf(Users(name = "prachi khisti", userName = "prachi", id = 1))
         every { usersUseCase() } returns flowOf(listOfUsers)
         classToTest = UsersViewModel(usersUseCase)
-        classToTest.usersUiState.test {
+        classToTest.usersStateFlow.test {
             Assert.assertTrue(awaitItem() is UiState.Loading)
             val success = awaitItem()
             Assert.assertTrue(success is UiState.Success)
@@ -67,7 +67,7 @@ UsersViewModelTest {
         val errorMessage = "Network failure"
         every { usersUseCase() } returns flow { throw RuntimeException(errorMessage) }
         classToTest = UsersViewModel(usersUseCase)
-        classToTest.usersUiState.test {
+        classToTest.usersStateFlow.test {
             Assert.assertTrue(awaitItem() is UiState.Loading)
             val error = awaitItem()
             Assert.assertTrue(error is UiState.Error)
