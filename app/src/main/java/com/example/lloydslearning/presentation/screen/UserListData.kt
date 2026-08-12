@@ -9,7 +9,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.lloydslearning.model.Users
+import com.example.lloydslearning.domain.model.Users
 
 @Composable
 fun UserListData(users: List<Users>) {

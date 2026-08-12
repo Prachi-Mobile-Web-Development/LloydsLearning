@@ -3,14 +3,12 @@ package com.example.lloydslearning.usecase
 import app.cash.turbine.test
 import com.example.lloydslearning.domain.repository.UserRepository
 import com.example.lloydslearning.domain.usecase.UsersUseCase
-import com.example.lloydslearning.model.Users
-import com.example.lloydslearning.presentation.screen.UiState
+import com.example.lloydslearning.domain.model.Users
 import io.mockk.clearAllMocks
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.resetMain

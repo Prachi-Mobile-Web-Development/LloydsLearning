@@ -3,7 +3,7 @@ package com.example.lloydslearning.presentation.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.lloydslearning.domain.usecase.UsersUseCase
-import com.example.lloydslearning.model.Users
+import com.example.lloydslearning.domain.model.Users
 import com.example.lloydslearning.presentation.screen.UiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import jakarta.inject.Inject
@@ -14,8 +14,6 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.stateIn
-import kotlinx.coroutines.flow.update
-import kotlinx.coroutines.launch
 
 @HiltViewModel
 class UsersViewModel @Inject constructor(private val getUsersUseCase: UsersUseCase) : ViewModel() {

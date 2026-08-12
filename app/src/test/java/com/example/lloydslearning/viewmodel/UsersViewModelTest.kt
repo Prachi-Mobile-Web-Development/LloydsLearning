@@ -2,7 +2,7 @@ package com.example.lloydslearning.viewmodel
 
 import app.cash.turbine.test
 import com.example.lloydslearning.domain.usecase.UsersUseCase
-import com.example.lloydslearning.model.Users
+import com.example.lloydslearning.domain.model.Users
 import com.example.lloydslearning.presentation.screen.UiState
 import com.example.lloydslearning.presentation.viewmodel.UsersViewModel
 import io.mockk.clearAllMocks

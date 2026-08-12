@@ -1,7 +1,6 @@
 package com.example.lloydslearning.domain.repository
 
-import com.example.lloydslearning.model.Users
-import com.example.lloydslearning.presentation.screen.UiState
+import com.example.lloydslearning.domain.model.Users
 import kotlinx.coroutines.flow.Flow
 
 interface UserRepository {

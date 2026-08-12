@@ -1,4 +1,4 @@
-package com.example.lloydslearning.model
+package com.example.lloydslearning.domain.model
 
 import com.example.lloydslearning.data.dto.UsersDtoItem
 

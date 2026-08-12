@@ -1,7 +1,5 @@
 package com.example.lloydslearning.presentation.screen
 
-import com.example.lloydslearning.model.Users
-
 sealed class UiState<out T>{
     object Loading: UiState<Nothing>()
     object Empty: UiState<Nothing>()

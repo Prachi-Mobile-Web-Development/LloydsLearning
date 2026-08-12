@@ -1,4 +1,4 @@
-package com.example.lloydslearning.ui.theme
+package com.example.lloydslearning.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

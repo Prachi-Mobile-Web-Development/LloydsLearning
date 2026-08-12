@@ -1,7 +1,7 @@
 package com.example.lloydslearning.domain.usecase
 
 import com.example.lloydslearning.domain.repository.UserRepository
-import com.example.lloydslearning.model.Users
+import com.example.lloydslearning.domain.model.Users
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
